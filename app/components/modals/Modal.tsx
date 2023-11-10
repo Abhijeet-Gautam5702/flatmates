@@ -13,7 +13,7 @@ interface ModalProps {
   footer?: React.ReactElement;
   actionLabel: string;
   disabled?: boolean;
-  secondaryAction: () => void;
+  secondaryAction?: () => void;
   secondaryActionLabel?: string;
 }
 
@@ -134,7 +134,8 @@ const Modal: React.FC<ModalProps> = ({
                 className="
                         flex
                         items-center
-                        p-6
+                        px-6
+                        py-4
                         rounded-t
                         justify-center
                         border-b-[1px]

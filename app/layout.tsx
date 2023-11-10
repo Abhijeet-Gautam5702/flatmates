@@ -3,7 +3,7 @@ import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "./components/navbar/Navbar";
-import Modal from "./components/modals/Modal";
+import RegisterModal from "./components/modals/RegisterModal";
 
 const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({ subsets: ["latin"], weight: "400" });
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <Modal isOpen title="Nice to see you again!" actionLabel="Login" />
+        <RegisterModal/>
         <Navbar />
         {children}
       </body>
