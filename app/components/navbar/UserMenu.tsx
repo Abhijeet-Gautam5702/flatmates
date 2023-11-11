@@ -5,6 +5,7 @@ import Avatar from "../Avatar";
 import { useCallback, useState } from "react";
 import MenuItem from "./MenuItem";
 import useRegisterModal from "@/app/hooks/useRegisterModal";
+import toast from "react-hot-toast";
 
 const UserMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,7 @@ const UserMenu = () => {
   const toggleMenu = useCallback(() => {
     // console.log(isOpen);
     setIsOpen((prevState) => !prevState);
+    // toast.success("Menu Opened");
     // console.log(isOpen);
   }, []);
 
